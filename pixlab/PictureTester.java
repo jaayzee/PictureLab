@@ -108,11 +108,27 @@ public class PictureTester
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("640x480.jpg");
+    Picture canvas = new Picture("beach.jpg");
     canvas.createCollage();
     canvas.explore();
   }
   
+  /** Method to test copy method */
+  public static void testCopy()
+  {
+    Picture ocean = new Picture("beach.jpg");
+    Picture daddy = new Picture("snowman.jpg");
+    ocean.copy(daddy, 10, 10, 60, 160, 200, 250);
+    ocean.explore();
+  }
+  
+  /** Method to test myCollage method */
+  public static void testMyCollage()
+  {
+    Picture ocean = new Picture("beach.jpg");
+    ocean.myCollage();
+    ocean.explore();
+  }
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
@@ -145,7 +161,8 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     testCollage();
-    //testCopy();
+    testCopy();
+    testMyCollage();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();

@@ -401,9 +401,27 @@ public class Picture extends SimplePicture
     this.copy(flower1,200,60);
     Picture flowerNoBlue = new Picture(flower2);
     flowerNoBlue.zeroBlue();
-    this.copy(flowerNoBlue,300,0);
-    this.copy(flower1,400,0);
-    this.copy(flower2,500,0);
+    this.copy(flowerNoBlue,300,80);
+    this.copy(flower1,400,100);
+    this.copy(flower2,500,120);
+    this.mirrorVertical();
+    this.write("collage.jpg");
+  }
+  
+  public void myCollage()
+  {
+    Picture bunbun = new Picture("blue-mark.jpg");
+    Picture flower2 = new Picture("beach.jpg");
+    this.copy(bunbun,0,20);
+    this.copy(flower2,100,40);
+    this.copy(bunbun,200,60);
+    Picture bunbunNoBlue = new Picture(bunbun);
+    bunbunNoBlue.zeroBlue();
+    bunbunNoBlue.zeroRed();
+    bunbunNoBlue.zeroGreen();
+    this.copy(bunbunNoBlue,300,80);
+    this.copy(bunbun,400,100);
+    this.copy(flower2,500,120);
     this.mirrorVertical();
     this.write("collage.jpg");
   }
