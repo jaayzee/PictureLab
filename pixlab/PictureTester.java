@@ -129,10 +129,11 @@ public class PictureTester
     ocean.myCollage();
     ocean.explore();
   }
+  
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("bunbun.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -160,10 +161,10 @@ public class PictureTester
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    testCollage();
-    testCopy();
-    testMyCollage();
-    //testEdgeDetection();
+    //testCollage();
+    //testCopy();
+    //testMyCollage();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();

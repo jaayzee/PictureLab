@@ -478,6 +478,31 @@ public class Picture extends SimplePicture
     }
   }
   
+  /** Method to show large changes in color 
+    * @param edgeDist the distance for finding edges
+    */
+  public void edgeDetectionTopToTBot(int edgeDist)
+  {
+    Pixel topPixel = null;
+    Pixel botPixel = null;
+    Pixel[][] pixels = this.getPixels2D();
+    Color botColor = null;
+    for (int row = 0; row < pixels.length; row++)
+    {
+      for (int col = 0; 
+           col < pixels[0].length-1; col++)
+      {
+        topPixel = pixels[col][row];
+        botPixel = pixels[col + 1][row];
+        botColor = botPixel.getColor();
+        if (botPixel.colorDistance(botColor) > 
+            edgeDist)
+          topPixel.setColor(Color.BLACK);
+        else
+          topPixel.setColor(Color.WHITE);
+      }
+    }
+  }
   
   /* Main method for testing - each class in Java can have a main 
    * method 
